@@ -30,6 +30,7 @@ const iconMap = {
 
 const ServiceCard = ({
   id,
+  number,
   icon,
   title,
   description,
@@ -43,8 +44,8 @@ const ServiceCard = ({
     <article className="serviceCard">
 
       <span className="serviceCard__number">
-        {String(id).padStart(2, "0")}
-      </span>
+     {String(number ?? id).padStart(2, "0")}
+    </span>
 
       <div className="serviceCard__iconWrapper">
 

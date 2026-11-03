@@ -87,12 +87,13 @@ const ServicesPage = () => {
                 {!loading && !error && services.length > 0 && (
                     <div className="servicesPage__grid">
 
-                        {services.map((service) => (
-                            <ServiceCard
-                                key={service.id}
-                                {...service}
-                            />
-                        ))}
+                        {services.map((service, index) => (
+                        <ServiceCard
+                            key={service.id}
+                            {...service}
+                            number={index + 1}
+                        />
+))}
 
                     </div>
                 )}

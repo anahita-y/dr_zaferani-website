@@ -71,13 +71,14 @@ const Services = () => {
           {error && <p role="alert">{error}</p>}
 
           {!loading && !error &&
-            featuredServices.map((service) => (
-              <ServiceCard
-                key={service.id}
-                {...service}
-              />
-            ))
-          }
+            featuredServices.map((service, index) => (
+            <ServiceCard
+            key={service.id}
+            {...service}
+            number={index + 1}
+          />
+  ))
+}
 
           {!loading && !error && services.length === 0 && (
             <p>هنوز خدمتی ثبت نشده است.</p>
